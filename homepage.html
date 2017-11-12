@@ -3,27 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript">var cnt; var interval;</script>
+    <script type="text/javascript">var cnt = 0;
+    var interval;</script>
     <script type="text/javascript" src="action.js"></script>
     <title>Homepage for a code assignment</title>
     <!--<link rel="stylesheet" href="css/validate.css">-->
 </head>
 <body>
+<div>
+    Input:
+    <input type="number" id="number" placeholder="enter an integer">
+    <button type="button" id="start" onclick="run()">Start</button>
+    <br>
+    <button type="button" id="reset" onclick="reset()">Reset</button>
+    <button type="button" id="restart" onclick="restart()">Restart</button>
+    <br>
+    Counter: <label id="counter"></label>
+</div>
+<div class="container" style="float: left;">
     <div>
-        Input:
-        <input type="number" id="number" placeholder="Please input an integer">
-        <button type="button" id="start" onclick="run()">Start</button><br>
-        <button type="button" id="reset" onclick="reset()">Reset</button>
-        <button type="button" id="restart" onclick="restart()">Restart</button>
+        <label id="fingers">Fingers</label>
     </div>
-    <div class="container" style="float: left;">
-        <div>
-            <label id="fingers">Fingers</label>
-        </div>
 
-        <div>
-            <label id="toes">Toes</label>
-        </div>
+    <div>
+        <label id="toes">Toes</label>
     </div>
+</div>
 </body>
 </html>
