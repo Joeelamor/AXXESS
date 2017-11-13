@@ -13,7 +13,7 @@ $(document).ready(function () {
             $("#number").after(error);
         } else if (Math.floor(val) !== Number(val)) {
             $("#number").after(error_int);
-        } else if (Number(val) < 0){
+        } else if (Number(val) < 0) {
             $("#number").after(error_pos);
         }
     });
