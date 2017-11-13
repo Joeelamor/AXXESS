@@ -1,16 +1,16 @@
 $(document).ready(function () {
-    var error_null = "<span id='error_null'>Input can not be empty</span>";
-    var error_int = "<span id='error_int'>Input must be an integer</span>";
-    var error_pos = "<span id='error_pos'>Input must be positive</span>";
+    var error = "<span class='error' id='error'>Please enter a valid number</span>";
+    var error_int = "<span class='error' id='error_int'>Input must be an integer</span>";
+    var error_pos = "<span class='error' id='error_pos'>Input must be positive</span>";
 
     $("#number").focusin(function () {
-        $("#error_null").remove();
+        $("#error").remove();
         $("#error_int").remove();
         $("#error_pos").remove();
     }).focusout(function () {
         var val = this.value;
         if (val === "") {
-            $("#number").after(error_null);
+            $("#number").after(error);
         } else if (Math.floor(val) !== Number(val)) {
             $("#number").after(error_int);
         } else if (Number(val) < 0){
@@ -26,16 +26,14 @@ function run() {
 
 function counting() {
     var val = document.getElementById("number").value;
-    var AxxessRed = "rgb(162, 46, 50)";
-    var AxxessBlue = "rgb(92, 177, 168)";
     if (cnt <= Number(val)) {
         if (cnt % 3 === 0) {
-            document.getElementById("fingers").style.backgroundColor = AxxessRed;
+            document.getElementById("fingers").style.backgroundColor = "green";
         } else {
             document.getElementById("fingers").style.backgroundColor = "white";
         }
         if (cnt % 5 === 0) {
-            document.getElementById("toes").style.backgroundColor = AxxessBlue;
+            document.getElementById("toes").style.backgroundColor = "orange";
         } else {
             document.getElementById("toes").style.backgroundColor = "white";
         }
