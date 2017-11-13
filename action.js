@@ -40,6 +40,11 @@ function counting() {
         document.getElementById("counter").innerHTML = cnt.toString();
         cnt++;
     }
+    else {
+        cnt = 0;
+        clearInterval(interval);
+        interval = null;
+    }
 }
 
 function reset() {
