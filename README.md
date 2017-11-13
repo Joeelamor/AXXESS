@@ -6,3 +6,6 @@ This folder is used for a code assignment.
 -   HTML5
 -   CSS3
 -   Javascript and jQuery
+
+
+### [Demo](./homepage.html)
